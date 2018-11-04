@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(rgb(55, 182, 76), white);
+    background-image: linear-gradient(rgb(35, 163, 56), white);
     background-size: 100px 900px;
     font-family: monospace ;
     font-size: 1.6em;
@@ -14,7 +14,7 @@ header{
   right: 0;
   width: 100%;
   height: 95px;
-  background-color: rgb(55, 182, 76);
+  background-color: rgb(41, 168, 62);
   font-size: 26px;
 }
 
