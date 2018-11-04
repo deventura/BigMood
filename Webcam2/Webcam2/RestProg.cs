@@ -3,6 +3,9 @@ using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using Newtonsoft.Json.Linq;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace CSHttpClientSample
 {
@@ -97,7 +100,10 @@ namespace CSHttpClientSample
             }
         }
 
-        public static async void MakeAnalysisRequestReturn(byte[] imageByteArray, float[] arr)
+
+        public static JEnumerable<JToken> JEnumOut;
+
+        public static async void MakeAnalysisRequestReturn(byte[] imageByteArray)
         {
             HttpClient client = new HttpClient();
             //float[] emotions = new float[8];
@@ -129,12 +135,28 @@ namespace CSHttpClientSample
                 response = await client.PostAsync(uri, content);
 
                 // Get the JSON response.
-                String contentString = await response.Content.ReadAsStringAsync();
+                String contentString = response.Content.ReadAsStringAsync().Result;
+
+                using (StreamWriter file = File.CreateText(@"C:\Users\willp\Desktop\BIGMOOD\BigMooood\Webcam2\Webcam2\test.txt"))
+                {
+                    JsonSerializer serializer = new JsonSerializer();
+                    serializer.Serialize(file, contentString);
+                }
 
                 // Display the JSON response.
-                Console.WriteLine("\nResponse:\n");
-                Console.WriteLine(JsonPrettyPrint(contentString));
-                Console.WriteLine("\nPress Enter to exit...");
+                byte[] bytearr = await response.Content.ReadAsByteArrayAsync();
+
+
+                JToken rootToken = JArray.Parse(contentString).First;
+
+                JToken scoresToken = rootToken.Last;
+                JEnumOut = scoresToken.Children();
+                //Task <JEnumerable<JToken>> JEnumTask = Task.Run(() => ( JEnum));
+                foreach(var v in JEnumOut)
+                {
+                    Console.Write(v);
+                }
+                //return JEnum;
             }
 
         }

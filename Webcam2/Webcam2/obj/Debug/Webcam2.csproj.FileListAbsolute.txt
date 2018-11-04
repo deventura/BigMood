@@ -30,3 +30,5 @@ C:\Users\willp\Desktop\BIGMOOD\BigMooood\Webcam2\Webcam2\obj\Debug\Webcam2.Prope
 C:\Users\willp\Desktop\BIGMOOD\BigMooood\Webcam2\Webcam2\obj\Debug\Webcam2.csproj.GenerateResource.cache
 C:\Users\willp\Desktop\BIGMOOD\BigMooood\Webcam2\Webcam2\obj\Debug\Webcam2.csproj.CoreCompileInputs.cache
 C:\Users\willp\Desktop\BIGMOOD\BigMooood\Webcam2\Webcam2\obj\Debug\Webcam2.csproj.CopyComplete
+C:\Users\willp\Desktop\BIGMOOD\BigMooood\Webcam2\Webcam2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\willp\Desktop\BIGMOOD\BigMooood\Webcam2\Webcam2\bin\Debug\Newtonsoft.Json.xml
