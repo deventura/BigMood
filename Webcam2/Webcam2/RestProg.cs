@@ -136,8 +136,16 @@ namespace CSHttpClientSample
 
                 // Get the JSON response.
                 String contentString = response.Content.ReadAsStringAsync().Result;
+                contentString = contentString.Replace("\\", "");
+                contentString = contentString.Replace("{", "");
+                contentString = contentString.Replace("}", "");
+                contentString = contentString.Replace("[", "");
+                contentString = contentString.Replace("]", "");
+                contentString = contentString.Replace("\"", "");
 
-                using (StreamWriter file = File.CreateText(@"C:\Users\willp\Desktop\BIGMOOD\BigMooood\Webcam2\Webcam2\test.txt"))
+
+
+                using (StreamWriter file = File.CreateText(@"C:\Users\willp\Desktop\BIGMOOD\BigMooood\Webcam2\Webcam2\EmotionData.txt"))
                 {
                     JsonSerializer serializer = new JsonSerializer();
                     serializer.Serialize(file, contentString);
@@ -147,7 +155,7 @@ namespace CSHttpClientSample
                 byte[] bytearr = await response.Content.ReadAsByteArrayAsync();
 
 
-                JToken rootToken = JArray.Parse(contentString).First;
+                /*JToken rootToken = JArray.Parse(contentString).First;
 
                 JToken scoresToken = rootToken.Last;
                 JEnumOut = scoresToken.Children();
@@ -155,7 +163,7 @@ namespace CSHttpClientSample
                 foreach(var v in JEnumOut)
                 {
                     Console.Write(v);
-                }
+                }*/
                 //return JEnum;
             }
 
