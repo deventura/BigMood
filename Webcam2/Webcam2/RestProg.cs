@@ -6,10 +6,10 @@ using System.Text;
 
 namespace CSHttpClientSample
 {
-    static class Program
+    static class RestProg
     {
         // Replace <Subscription Key> with your valid subscription key.
-        const string subscriptionKey = "a41b27e71464411e915e8e48aa6e1337";
+        const string subscriptionKey = "35bc4844cf504ff4aed447e63202feee";
 
         // NOTE: You must use the same region in your REST call as you used to
         // obtain your subscription keys. For example, if you obtained your
@@ -55,7 +55,7 @@ namespace CSHttpClientSample
         /// Gets the analysis of the specified image by using the Face REST API.
         /// </summary>
         /// <param name="imageFilePath">The image file.</param>
-        static async void MakeAnalysisRequest(string imageFilePath)
+        public static async void MakeAnalysisRequest(string imageFilePath)
         {
             HttpClient client = new HttpClient();
 
@@ -97,6 +97,47 @@ namespace CSHttpClientSample
             }
         }
 
+        public static async void MakeAnalysisRequest(byte[] imageByteArray)
+        {
+            HttpClient client = new HttpClient();
+
+            // Request headers.
+            client.DefaultRequestHeaders.Add(
+                "Ocp-Apim-Subscription-Key", subscriptionKey);
+
+            // Request parameters. A third optional parameter is "details".
+            string requestParameters = "returnFaceId=true&returnFaceLandmarks=false" +
+                "&returnFaceAttributes=age,gender,headPose,smile,facialHair,glasses," +
+                "emotion,hair,makeup,occlusion,accessories,blur,exposure,noise";
+
+            // Assemble the URI for the REST API Call.
+            string uri = uriBase + "?" + requestParameters;
+
+            HttpResponseMessage response;
+
+            // Request body. Posts a locally stored JPEG image.
+            byte[] byteData = imageByteArray;
+
+            using (ByteArrayContent content = new ByteArrayContent(byteData))
+            {
+                // This example uses content type "application/octet-stream".
+                // The other content types you can use are "application/json"
+                // and "multipart/form-data".
+                content.Headers.ContentType =
+                    new MediaTypeHeaderValue("application/octet-stream");
+
+                // Execute the REST API call.
+                response = await client.PostAsync(uri, content);
+
+                // Get the JSON response.
+                string contentString = await response.Content.ReadAsStringAsync();
+
+                // Display the JSON response.
+                Console.WriteLine("\nResponse:\n");
+                Console.WriteLine(JsonPrettyPrint(contentString));
+                Console.WriteLine("\nPress Enter to exit...");
+            }
+        }
 
         /// <summary>
         /// Returns the contents of the specified file as a byte array.

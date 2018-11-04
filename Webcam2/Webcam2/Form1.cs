@@ -10,7 +10,9 @@ using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
 
-namespace Webcam2
+
+
+namespace Webcam2 
 {
     public partial class Form1 : Form
     {
@@ -71,6 +73,18 @@ private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
             VideoSrc = new VideoCaptureDevice(videoDevices[ComboBox1.SelectedIndex].MonikerString);
             VideoSrc.NewFrame += new NewFrameEventHandler(VideoSrc_NewFrame);
             VideoSrc.Start();
+        }
+
+        public static byte[] ImageToByte(Image img)
+        {
+            ImageConverter converter = new ImageConverter();
+            return (byte[])converter.ConvertTo(img, typeof(byte[]));
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {          
+            CSHttpClientSample.RestProg.MakeAnalysisRequest(ImageToByte(PictureBox1.Image));
+             
         }
     }
 }
