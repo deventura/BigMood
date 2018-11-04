@@ -81,10 +81,10 @@ private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
             return (byte[])converter.ConvertTo(img, typeof(byte[]));
         }
 
+        private float[] emotions = new float[8];
         private void Button1_Click(object sender, EventArgs e)
         {          
-            CSHttpClientSample.RestProg.MakeAnalysisRequest(ImageToByte(PictureBox1.Image));
-             
+            CSHttpClientSample.RestProg.MakeAnalysisRequestReturn(ImageToByte(PictureBox1.Image), emotions);
         }
     }
 }

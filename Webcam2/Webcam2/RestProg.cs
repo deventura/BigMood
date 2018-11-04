@@ -64,9 +64,9 @@ namespace CSHttpClientSample
                 "Ocp-Apim-Subscription-Key", subscriptionKey);
 
             // Request parameters. A third optional parameter is "details".
-            string requestParameters = "returnFaceId=true&returnFaceLandmarks=false" +
-                "&returnFaceAttributes=age,gender,headPose,smile,facialHair,glasses," +
-                "emotion,hair,makeup,occlusion,accessories,blur,exposure,noise";
+            string requestParameters = "returnFaceLandmarks=false" +
+                "&returnFaceAttributes=age,gender" +
+                "emotion";
 
             // Assemble the URI for the REST API Call.
             string uri = uriBase + "?" + requestParameters;
@@ -97,18 +97,17 @@ namespace CSHttpClientSample
             }
         }
 
-        public static async void MakeAnalysisRequest(byte[] imageByteArray)
+        public static async void MakeAnalysisRequestReturn(byte[] imageByteArray, float[] arr)
         {
             HttpClient client = new HttpClient();
-
+            //float[] emotions = new float[8];
             // Request headers.
             client.DefaultRequestHeaders.Add(
                 "Ocp-Apim-Subscription-Key", subscriptionKey);
 
             // Request parameters. A third optional parameter is "details".
-            string requestParameters = "returnFaceId=true&returnFaceLandmarks=false" +
-                "&returnFaceAttributes=age,gender,headPose,smile,facialHair,glasses," +
-                "emotion,hair,makeup,occlusion,accessories,blur,exposure,noise";
+            string requestParameters = "returnFaceId=false" +
+                "&returnFaceAttributes=emotion";
 
             // Assemble the URI for the REST API Call.
             string uri = uriBase + "?" + requestParameters;
@@ -130,13 +129,14 @@ namespace CSHttpClientSample
                 response = await client.PostAsync(uri, content);
 
                 // Get the JSON response.
-                string contentString = await response.Content.ReadAsStringAsync();
+                String contentString = await response.Content.ReadAsStringAsync();
 
                 // Display the JSON response.
                 Console.WriteLine("\nResponse:\n");
                 Console.WriteLine(JsonPrettyPrint(contentString));
                 Console.WriteLine("\nPress Enter to exit...");
             }
+
         }
 
         /// <summary>
