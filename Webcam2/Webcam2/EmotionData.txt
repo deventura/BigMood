@@ -1,1 +1,1 @@
-"faceRectangle:top:146,left:171,width:242,height:242},faceAttributes:emotion:anger:0.0,contempt:0.002,disgust:0.0,fear:0.0,happiness:0.0,neutral:0.936,sadness:0.062,surprise:0.0}}}]"
+"faceRectangle:top:201,left:246,width:218,height:218,faceAttributes:emotion:anger:0.0,contempt:0.001,disgust:0.0,fear:0.0,happiness:0.0,neutral:0.883,sadness:0.116,surprise:0.0"

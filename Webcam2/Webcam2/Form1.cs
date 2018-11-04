@@ -85,17 +85,27 @@ namespace Webcam2
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Console.Write("Check0");
             CSHttpClientSample.RestProg.MakeAnalysisRequestReturn(ImageToByte(PictureBox1.Image));
-            emotions = CSHttpClientSample.RestProg.JEnumOut;
-
-            Console.Write("Checkfirst");
-            foreach (var v in emotions)
-            {
-                Console.Write(v);
-                Console.Write("Check");
-            }
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
