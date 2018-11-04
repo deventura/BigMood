@@ -101,7 +101,7 @@ namespace CSHttpClientSample
         }
 
 
-        public static JEnumerable<JToken> JEnumOut;
+      
 
         public static async void MakeAnalysisRequestReturn(byte[] imageByteArray)
         {
