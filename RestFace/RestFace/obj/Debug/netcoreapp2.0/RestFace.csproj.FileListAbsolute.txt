@@ -1,0 +1,11 @@
+c:\users\denis\source\repos\RestFace\RestFace\bin\Debug\netcoreapp2.0\RestFace.deps.json
+c:\users\denis\source\repos\RestFace\RestFace\bin\Debug\netcoreapp2.0\RestFace.runtimeconfig.json
+c:\users\denis\source\repos\RestFace\RestFace\bin\Debug\netcoreapp2.0\RestFace.runtimeconfig.dev.json
+c:\users\denis\source\repos\RestFace\RestFace\bin\Debug\netcoreapp2.0\RestFace.dll
+c:\users\denis\source\repos\RestFace\RestFace\bin\Debug\netcoreapp2.0\RestFace.pdb
+c:\users\denis\source\repos\RestFace\RestFace\obj\Debug\netcoreapp2.0\RestFace.csprojResolveAssemblyReference.cache
+c:\users\denis\source\repos\RestFace\RestFace\obj\Debug\netcoreapp2.0\RestFace.csproj.CoreCompileInputs.cache
+c:\users\denis\source\repos\RestFace\RestFace\obj\Debug\netcoreapp2.0\RestFace.AssemblyInfoInputs.cache
+c:\users\denis\source\repos\RestFace\RestFace\obj\Debug\netcoreapp2.0\RestFace.AssemblyInfo.cs
+c:\users\denis\source\repos\RestFace\RestFace\obj\Debug\netcoreapp2.0\RestFace.dll
+c:\users\denis\source\repos\RestFace\RestFace\obj\Debug\netcoreapp2.0\RestFace.pdb
