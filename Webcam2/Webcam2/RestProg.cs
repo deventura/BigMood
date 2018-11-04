@@ -153,15 +153,15 @@ namespace CSHttpClientSample
                 // Display the JSON response.
                 byte[] bytearr = await response.Content.ReadAsByteArrayAsync();
 
-                String text = System.IO.File.ReadAllText(@"C:\Users\willp\Desktop\BIGMOOD\BigMooood\Webcam2\Webcam2\EmotionData.txt");
-                String[] arraytext = text.Split("[","{",":", "\\");
-
+                //String text = System.IO.File.ReadAllText(@"C:\Users\willp\Desktop\BIGMOOD\BigMooood\Webcam2\Webcam2\EmotionData.txt");
+                //String[] arraytext = text.Split("[","{",":", "\\");
+/*
                 using (StreamWriter file = File.CreateText(@"C:\Users\willp\Desktop\BIGMOOD\BigMooood\Webcam2\Webcam2\test.txt"))
                 {
                     JsonSerializer serializer = new JsonSerializer();
                     serializer.Serialize(file, arraytext);
                 }
-
+                */
 
 
                 /*JToken rootToken = JArray.Parse(contentString).First;
