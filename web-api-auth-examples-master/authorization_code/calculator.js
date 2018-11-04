@@ -33,11 +33,16 @@ function songCalculator(fear, happy, neutral, sad, anger){
     valence = (1*fear)+(1*happy)+(0.5*neutral)+(0*sad)+(0*anger);
 }
 
-function songSelection(dance, energy, mode, valence){
-    for(var i = 0; i < tracks.length; i++){
-        tracks[0]
-    }
-
+function handleTracks(e){
+    e.preventDefault();
+    axios({
+        method: 'get',
+        url: 'https://api.spotify.com/v1/audio-features/6rPO02ozF3bM7NnOV4h6s2',
+        headers: {
+            'Authorization': 'Bearer' + 'BQBJ8Gak16vUullzjbNgO2YxSawW2EJXl3rYx_w108c7DARvIGDEPU-LkWLBpGosOlQGfQSVcRcH1d1-aGwti4p3WW4UEvw7IJgeE3cstYZ3Oy-JbgZuGLtsLE3LkRpkF73xHVpDpMtbsDdWQXyde7vJ',
+            'Content-Type': 'application/json'
+        }
+    })
 }
 
 
