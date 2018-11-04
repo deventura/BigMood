@@ -1,4 +1,9 @@
 //Main function that is called after analyzing face
+import SpotifyWebApi from 'spotify-web-api-js';
+const spotifyApi = new SpotifyWebApi();
+
+var tracks = spotifyApi.getMyTopTracks();
+
 function assignEmotions(){
     var fear;
     var happy;
@@ -29,11 +34,10 @@ function songCalculator(fear, happy, neutral, sad, anger){
 }
 
 function songSelection(dance, energy, mode, valence){
-    const URL = 'https://api.spotify.com/v1/audio-features/06AKEBrKUckW0KREUWRnvT'
-    /*fetch(URL)
-    .then*/
-
-    
-
+    for(var i = 0; i < tracks.length; i++){
+        tracks[0]
+    }
 
 }
+
+
