@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "c:\\users\\denis\\source\\repos\\RestFace\\RestFace\\RestFace.csproj",
+      "projectUniqueName": "C:\\Users\\denis\\Documents\\GitHub\\BigMooood\\RestFace\\RestFace\\RestFace.csproj",
       "projectName": "RestFace",
-      "projectPath": "c:\\users\\denis\\source\\repos\\RestFace\\RestFace\\RestFace.csproj",
+      "projectPath": "C:\\Users\\denis\\Documents\\GitHub\\BigMooood\\RestFace\\RestFace\\RestFace.csproj",
       "packagesPath": "C:\\Users\\denis\\.nuget\\packages\\",
-      "outputPath": "c:\\users\\denis\\source\\repos\\RestFace\\RestFace\\obj\\",
+      "outputPath": "C:\\Users\\denis\\Documents\\GitHub\\BigMooood\\RestFace\\RestFace\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
