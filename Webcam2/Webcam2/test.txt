@@ -1,0 +1,1 @@
+"[{\"faceRectangle\":{\"top\":227,\"left\":0,\"width\":113,\"height\":164},\"faceAttributes\":{\"emotion\":{\"anger\":0.002,\"contempt\":0.0,\"disgust\":0.0,\"fear\":0.0,\"happiness\":0.001,\"neutral\":0.981,\"sadness\":0.015,\"surprise\":0.0}}}]"

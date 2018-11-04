@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
+using Newtonsoft.Json.Linq;
 
 
-
-namespace Webcam2 
+namespace Webcam2
 {
     public partial class Form1 : Form
     {
@@ -35,7 +35,7 @@ namespace Webcam2
             {
                 VideoSrc = new VideoCaptureDevice(videoDevices[ComboBox1.SelectedIndex].MonikerString);
             }
-            catch(ArgumentOutOfRangeException )
+            catch (ArgumentOutOfRangeException)
             {
                 VideoSrc = new VideoCaptureDevice(videoDevices[0].MonikerString);
             }
@@ -51,7 +51,7 @@ namespace Webcam2
             {
                 PictureBox1.Image = image;
             }
-            catch(Exception)
+            catch (Exception)
             {
 
             }
@@ -67,7 +67,7 @@ namespace Webcam2
 
         }
 
-private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             VideoSrc.Stop();
             VideoSrc = new VideoCaptureDevice(videoDevices[ComboBox1.SelectedIndex].MonikerString);
@@ -81,10 +81,21 @@ private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
             return (byte[])converter.ConvertTo(img, typeof(byte[]));
         }
 
-        private float[] emotions = new float[8];
+        JEnumerable<JToken> emotions;
+
         private void Button1_Click(object sender, EventArgs e)
-        {          
-            CSHttpClientSample.RestProg.MakeAnalysisRequestReturn(ImageToByte(PictureBox1.Image), emotions);
+        {
+            Console.Write("Check0");
+            CSHttpClientSample.RestProg.MakeAnalysisRequestReturn(ImageToByte(PictureBox1.Image));
+            emotions = CSHttpClientSample.RestProg.JEnumOut;
+
+            Console.Write("Checkfirst");
+            foreach (var v in emotions)
+            {
+                Console.Write(v);
+                Console.Write("Check");
+            }
         }
+
     }
 }
