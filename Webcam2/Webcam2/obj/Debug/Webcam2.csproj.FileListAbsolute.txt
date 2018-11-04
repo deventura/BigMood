@@ -1,0 +1,15 @@
+C:\Users\denis\source\repos\Webcam2\Webcam2\bin\Debug\Webcam2.exe
+C:\Users\denis\source\repos\Webcam2\Webcam2\bin\Debug\Webcam2.pdb
+C:\Users\denis\source\repos\Webcam2\Webcam2\bin\Debug\AForge.dll
+C:\Users\denis\source\repos\Webcam2\Webcam2\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\denis\source\repos\Webcam2\Webcam2\bin\Debug\AForge.Video.dll
+C:\Users\denis\source\repos\Webcam2\Webcam2\bin\Debug\AForge.xml
+C:\Users\denis\source\repos\Webcam2\Webcam2\bin\Debug\AForge.Video.xml
+C:\Users\denis\source\repos\Webcam2\Webcam2\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\denis\source\repos\Webcam2\Webcam2\obj\Debug\Webcam2.csprojResolveAssemblyReference.cache
+C:\Users\denis\source\repos\Webcam2\Webcam2\obj\Debug\Webcam2.Form1.resources
+C:\Users\denis\source\repos\Webcam2\Webcam2\obj\Debug\Webcam2.Properties.Resources.resources
+C:\Users\denis\source\repos\Webcam2\Webcam2\obj\Debug\Webcam2.csproj.GenerateResource.Cache
+C:\Users\denis\source\repos\Webcam2\Webcam2\obj\Debug\Webcam2.csproj.CoreCompileInputs.cache
+C:\Users\denis\source\repos\Webcam2\Webcam2\obj\Debug\Webcam2.exe
+C:\Users\denis\source\repos\Webcam2\Webcam2\obj\Debug\Webcam2.pdb
