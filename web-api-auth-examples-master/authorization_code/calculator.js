@@ -33,7 +33,7 @@ function songCalculator(fear, happy, neutral, sad, anger){
     valence = (1*fear)+(1*happy)+(0.5*neutral)+(0*sad)+(0*anger);
 }
 
-function handleTracks(e){
+function handleSong(e){
     e.preventDefault();
     axios({
         method: 'get',
@@ -42,6 +42,12 @@ function handleTracks(e){
             'Authorization': 'Bearer' + 'BQBJ8Gak16vUullzjbNgO2YxSawW2EJXl3rYx_w108c7DARvIGDEPU-LkWLBpGosOlQGfQSVcRcH1d1-aGwti4p3WW4UEvw7IJgeE3cstYZ3Oy-JbgZuGLtsLE3LkRpkF73xHVpDpMtbsDdWQXyde7vJ',
             'Content-Type': 'application/json'
         }
+    })
+    .then(res => {
+        const song = res.data.tracks.items[0];
+        console.log(song)
+        const postThunk = postSong(song, this.props.currentChat);
+        StorageEvent.dispatch(postThunk)
     })
 }
 
